@@ -1,0 +1,11 @@
+[
+  {
+    "id": "f8a1ccd4-c3ef-4f98-b90b-46dad3383910",
+    "name": "Test-Host",
+    "type": "bot",
+    "runtime": "node",
+    "entry": "Scu.js",
+    "autoRestart": true,
+    "createdAt": "2026-09-06T15:35:38.442Z"
+  }
+]
