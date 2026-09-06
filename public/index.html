@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Hosting</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div id="loginScreen" class="screen">
+    <div class="card login-card">
+        <div class="logo">⚡</div>
+        <h1>Private Hosting</h1>
+        <p>פאנל האחסון הפרטי שלך</p>
+
+        <form id="loginForm">
+            <input
+                id="username"
+                placeholder="שם משתמש"
+                autocomplete="username"
+                required
+            >
+
+            <input
+                id="password"
+                type="password"
+                placeholder="סיסמה"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">
+                התחבר
+            </button>
+        </form>
+
+        <div id="loginError" class="error"></div>
+    </div>
+</div>
+
+<div id="appScreen" class="hidden">
+
+    <header>
+        <div>
+            <h1>⚡ Private Hosting</h1>
+            <span id="welcome"></span>
+        </div>
+
+        <button id="logoutBtn" class="danger">
+            התנתק
+        </button>
+    </header>
+
+    <main>
+
+        <section class="card">
+            <h2>➕ יצירת פרויקט</h2>
+
+            <form id="projectForm" class="grid">
+
+                <input
+                    id="projectName"
+                    placeholder="שם הפרויקט"
+                    required
+                >
+
+                <select id="projectType">
+                    <option value="bot">Discord Bot</option>
+                    <option value="website">Website</option>
+                    <option value="script">Script</option>
+                </select>
+
+                <select id="runtime">
+                    <option value="node">Node.js</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="lua">Lua</option>
+                    <option value="shell">Shell</option>
+                </select>
+
+                <input
+                    id="entry"
+                    placeholder="קובץ הפעלה: index.js"
+                    value="index.js"
+                    required
+                >
+
+                <button type="submit">
+                    צור פרויקט
+                </button>
+            </form>
+
+            <div id="projectError" class="error"></div>
+        </section>
+
+        <section>
+            <div class="section-title">
+                <h2>📦 הפרויקטים שלי</h2>
+                <button id="refreshBtn">רענן</button>
+            </div>
+
+            <div id="projects" class="projects"></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
